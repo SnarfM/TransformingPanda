@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A Solo Dev with a Dream." />
+  <meta name="description" content="Indie game studio crafting stylish, memorable experiences." />
 
   <!-- Update these -->
-  <title>Transforming Panda</title>
+  <title>Transforming Panda — Indie Games</title>
 
   <style>
     :root{
@@ -73,9 +73,18 @@
     }
     .logo{
       width:38px; height:38px; border-radius:12px;
-      background:
+      /* Optional: replace with an actual image.
+         1) Create: /assets/logo.png in your repo
+         2) Commit + push
+         3) The site will load it automatically (fallback gradient remains if missing)
+      */
+      background-image:
+        url('assets/logo.png'),
         radial-gradient(12px 12px at 30% 30%, rgba(255,255,255,.95), rgba(255,255,255,0) 55%),
         linear-gradient(135deg, rgba(110,231,255,.95), rgba(167,139,250,.92) 40%, rgba(244,114,182,.88));
+      background-size: cover, auto, auto;
+      background-position: center, center, center;
+      background-repeat: no-repeat, no-repeat, no-repeat;
       box-shadow: 0 10px 40px rgba(167,139,250,.18);
       border: 1px solid rgba(255,255,255,.15);
     }
@@ -213,13 +222,23 @@
     }
     .banner:focus-within{ outline: 2px solid rgba(110,231,255,.55); outline-offset: 2px; }
 
+    .banner .art{
+      position:absolute; inset:0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity:.82;
+      transform: scale(1.02);
+      filter: saturate(1.15) contrast(1.05);
+    }
+
     .banner .bg{
       position:absolute; inset:0;
       background:
         radial-gradient(900px 420px at 10% 20%, rgba(110,231,255,.24), transparent 55%),
         radial-gradient(860px 520px at 85% 15%, rgba(167,139,250,.22), transparent 55%),
         radial-gradient(720px 520px at 45% 100%, rgba(244,114,182,.18), transparent 60%),
-        linear-gradient(135deg, rgba(0,0,0,.0), rgba(0,0,0,.35));
+        linear-gradient(135deg, rgba(0,0,0,.25), rgba(0,0,0,.62));
       filter: saturate(1.25);
     }
 
@@ -345,13 +364,11 @@
 
     /* Mobile nav */
     .menu-btn{ display:none; }
+    .mobile{ display:none; }
     @media (max-width: 760px){
       nav ul{ display:none; }
       .menu-btn{ display:inline-flex; }
-      .mobile{
-        display:none;
-        padding: 12px 0 18px;
-      }
+      .mobile{ padding: 12px 0 18px; }
       .mobile.open{ display:block; }
       .mobile a{ display:block; padding: 10px 8px; color: var(--muted); border-radius: 12px; }
       .mobile a:hover{ background: rgba(255,255,255,.06); color: var(--text); }
@@ -366,7 +383,7 @@
       <div class="nav">
         <a class="brand" href="#top" aria-label="Go to top">
           <span class="logo" aria-hidden="true"></span>
-          <span>Your Studio Name</span>
+          <span>Transforming Panda</span>
         </a>
 
         <nav aria-label="Primary">
@@ -380,7 +397,7 @@
 
         <div style="display:flex; gap:10px; align-items:center;">
           <!-- Replace with your itch.io profile URL -->
-          <a class="btn primary" href="https://yourname.itch.io/" target="_blank" rel="noreferrer">
+          <a class="btn primary" href="https://transformingpanda.itch.io/" target="_blank" rel="noreferrer">
             Visit itch.io
             <span aria-hidden="true">↗</span>
           </a>
@@ -404,10 +421,10 @@
     <div class="wrap hero">
       <div class="hero-grid">
         <div class="card hero-main">
-          <div class="kicker"><span class="dot" aria-hidden="true"></span> Indie studio • Shipping weirdly polished stuff</div>
-          <h1>Small team. Big vibes. Games with bite.</h1>
+          <div class="kicker"><span class="dot" aria-hidden="true"></span> Solo indie dev • Shipping weirdly polished stuff</div>
+          <h1>Solo dev. Big vibes. Games with bite.</h1>
           <p class="sub">
-            We build character-driven experiences with punchy combat, bold art direction, and satisfying systems.
+            I build character-driven experiences with punchy combat, bold art direction, and satisfying systems.
             Follow along, play the latest builds, and wishlist what’s next.
           </p>
           <div class="cta-row">
@@ -432,7 +449,7 @@
           <div class="mini">
             <h3>Fast links</h3>
             <p>
-              <a class="btn" style="margin-top:10px; width:100%;" href="https://yourname.itch.io/" target="_blank" rel="noreferrer">All releases on itch.io ↗</a>
+              <a class="btn" style="margin-top:10px; width:100%;" href="https://transformingpanda.itch.io/" target="_blank" rel="noreferrer">All releases on itch.io ↗</a>
             </p>
           </div>
         </aside>
@@ -455,6 +472,8 @@
           -->
 
           <article class="banner" data-theme="1">
+            <!-- Optional banner image (replace the file path) -->
+            <!-- <div class="art" style="background-image:url('assets/game-1.jpg')" aria-hidden="true"></div> -->
             <div class="bg" aria-hidden="true"></div>
             <div class="shine" aria-hidden="true"></div>
             <div class="content">
@@ -472,10 +491,11 @@
                 <div class="arrow" aria-hidden="true">→</div>
               </div>
             </div>
-            <a href="https://yourname.itch.io/your-game-1" target="_blank" rel="noreferrer"><span>Open Project Title One on itch.io</span></a>
+            <a href="https://transformingpanda.itch.io/your-game-1" target="_blank" rel="noreferrer"><span>Open Project Title One on itch.io</span></a>
           </article>
 
           <article class="banner" data-theme="2">
+            <!-- <div class="art" style="background-image:url('assets/game-2.jpg')" aria-hidden="true"></div> -->
             <div class="bg" aria-hidden="true" style="background:
               radial-gradient(900px 420px at 12% 22%, rgba(52,211,153,.22), transparent 55%),
               radial-gradient(860px 520px at 90% 15%, rgba(110,231,255,.18), transparent 55%),
@@ -497,10 +517,11 @@
                 <div class="arrow" aria-hidden="true">→</div>
               </div>
             </div>
-            <a href="https://yourname.itch.io/your-game-2" target="_blank" rel="noreferrer"><span>Open Project Title Two on itch.io</span></a>
+            <a href="https://transformingpanda.itch.io/your-game-2" target="_blank" rel="noreferrer"><span>Open Project Title Two on itch.io</span></a>
           </article>
 
           <article class="banner" data-theme="3">
+            <!-- <div class="art" style="background-image:url('assets/game-3.jpg')" aria-hidden="true"></div> -->
             <div class="bg" aria-hidden="true" style="background:
               radial-gradient(900px 420px at 10% 20%, rgba(244,114,182,.22), transparent 55%),
               radial-gradient(860px 520px at 85% 20%, rgba(167,139,250,.20), transparent 55%),
@@ -522,10 +543,11 @@
                 <div class="arrow" aria-hidden="true">→</div>
               </div>
             </div>
-            <a href="https://yourname.itch.io/your-game-3" target="_blank" rel="noreferrer"><span>Open Project Title Three on itch.io</span></a>
+            <a href="https://transformingpanda.itch.io/your-game-3" target="_blank" rel="noreferrer"><span>Open Project Title Three on itch.io</span></a>
           </article>
 
           <article class="banner" data-theme="4">
+            <!-- <div class="art" style="background-image:url('assets/game-4.jpg')" aria-hidden="true"></div> -->
             <div class="bg" aria-hidden="true" style="background:
               radial-gradient(900px 420px at 10% 20%, rgba(251,191,36,.18), transparent 55%),
               radial-gradient(860px 520px at 85% 15%, rgba(52,211,153,.18), transparent 55%),
@@ -547,7 +569,7 @@
                 <div class="arrow" aria-hidden="true">→</div>
               </div>
             </div>
-            <a href="https://yourname.itch.io/your-game-4" target="_blank" rel="noreferrer"><span>Open Project Title Four on itch.io</span></a>
+            <a href="https://transformingpanda.itch.io/your-game-4" target="_blank" rel="noreferrer"><span>Open Project Title Four on itch.io</span></a>
           </article>
         </div>
       </div>
@@ -556,7 +578,7 @@
     <section id="about">
       <div class="wrap">
         <div class="section-title">
-          <h2>About the studio</h2>
+          <h2>About Transforming Panda</h2>
           <p>Put your story in 2–3 sentences</p>
         </div>
 
@@ -564,15 +586,14 @@
           <div class="info span-6">
             <h3>Who we are</h3>
             <p>
-              Write a short intro: where you’re based, what you love making, and what players can expect.
+              Transforming Panda is a solo indie game development studio focused on building stylish, system-driven games with strong atmosphere and memorable mechanics.
               Example: “We’re an indie dev team focused on snappy combat, atmospheric worlds, and secrets worth hunting.”
             </p>
           </div>
           <div class="info span-6">
             <h3>Our style</h3>
             <p>
-              Mention the vibe: noir, cozy, high-action, horror, stylized, retro, etc. Add a tiny bit of personality.
-              Bonus points for a one-liner studio motto.
+              The vibe leans toward bold visuals, punchy gameplay, and slightly experimental ideas — always polished, always player-first.
             </p>
           </div>
         </div>
@@ -621,7 +642,7 @@
 
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
               <!-- Replace with your links -->
-              <a class="btn" href="https://yourname.itch.io/" target="_blank" rel="noreferrer">itch.io ↗</a>
+              <a class="btn" href="https://transformingpanda.itch.io/" target="_blank" rel="noreferrer">itch.io ↗</a>
               <a class="btn" href="https://twitter.com/" target="_blank" rel="noreferrer">X / Twitter ↗</a>
               <a class="btn" href="https://www.youtube.com/" target="_blank" rel="noreferrer">YouTube ↗</a>
               <a class="btn" href="https://discord.com/" target="_blank" rel="noreferrer">Discord ↗</a>
@@ -656,9 +677,9 @@
         <div>
           <div style="display:flex; align-items:center; gap:10px;">
             <span class="logo" aria-hidden="true" style="width:28px;height:28px;border-radius:10px;"></span>
-            <strong>Your Studio Name</strong>
+            <strong>Transforming Panda</strong>
           </div>
-          <div class="small" style="margin-top:6px;">© <span id="year"></span> Your Studio Name. All rights reserved.</div>
+          <div class="small" style="margin-top:6px;">© <span id="year"></span> Transforming Panda. All rights reserved.</div>
         </div>
         <div class="small">
           <a href="#top" class="btn">Back to top ↑</a>
