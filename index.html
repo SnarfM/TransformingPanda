@@ -714,14 +714,25 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
-  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-  <script>
-    kofiWidgetOverlay.draw('transformingpanda', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#794bc4',
-    'floating-chat.donateButton.text-color': '#fff'
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('transformingpanda', {
+  'type': 'floating-chat',
+  'floating-chat.donateButton.text': 'Support me',
+  'floating-chat.donateButton.background-color': '#794bc4',
+  'floating-chat.donateButton.text-color': '#fff'
+});
+</script>
+
+<script>
+document.getElementById("kofi-button").addEventListener("click", function () {
+  gtag('event', 'donation', {
+    event_category: 'engagement',
+    event_label: 'Ko-fi Button'
   });
-  </script>
+});
+</script>
+
+
 </body>
 </html>
