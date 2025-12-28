@@ -453,17 +453,6 @@
             <p>
               <a class="btn" style="margin-top:10px; width:100%;" href="https://www.youtube.com/watch?v=xvFZjo5PgG0/" target="_blank" rel="noreferrer">All releases on Steam ↗</a>
             </p>
-            <p>
-              <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-              <script>
-                kofiWidgetOverlay.draw('transformingpanda', {
-                'type': 'floating-chat',
-                'floating-chat.donateButton.text': 'Support me',
-                'floating-chat.donateButton.background-color': '#794bc4',
-                'floating-chat.donateButton.text-color': '#fff'
-                });
-              </script>
-            </p> 
           </div>
         </aside>
       </div>
@@ -723,6 +712,16 @@
 
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+  <script>
+    kofiWidgetOverlay.draw('transformingpanda', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#794bc4',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
   </script>
 </body>
 </html>
