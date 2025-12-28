@@ -724,20 +724,5 @@
 });
 </script>
 
-<script>
-document.addEventListener("click", function (event) {
-  const link = event.target.closest('a[href*="ko-fi.com"]');
-  if (!link) return;
-
-  if (typeof gtag === "function") {
-    gtag('event', 'donation', {
-      event_category: 'engagement',
-      event_label: 'Ko-fi Floating Widget',
-      transport_type: 'beacon'
-    });
-  }
-});
-</script>
-
 </body>
 </html>
