@@ -725,11 +725,15 @@
 </script>
 
 <script>
-document.getElementById("kofi-button").addEventListener("click", function () {
-  gtag('event', 'donation', {
-    event_category: 'engagement',
-    event_label: 'Ko-fi Button'
-  });
+document.addEventListener("click", function (event) {
+  const link = event.target.closest('a[href*="ko-fi.com"]');
+
+  if (link) {
+    gtag('event', 'donation', {
+      event_category: 'engagement',
+      event_label: 'Ko-fi Floating Widget'
+    });
+  }
 });
 </script>
 
